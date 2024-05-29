@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/login.css">
+    <link rel="icon" href="../static/iconeSite.png" type="image/x-icon">
+</head>
+<body>
+    <form method="POST" action="/process_login">
+        
+        <div class="login">
+            <h1 class="login-head">Login</h1><br>
+            
+            <div class="user-login">
+                <input required="required" id="inputUsr-login" placeholder="Username" type="text" name="username_login">
+                <label class="usernameLabel-login" for="inputUsr-login">Username</label>
+                <img src="../static/user.png" alt="usr-login" class="userIcon-login">
+            </div><br><br>
+            
+            <div class="password-login">
+                <input required="required" id="inputPswd-login" placeholder="Password" type="password" name="password_login">
+                <label class="passwordLabel-login" for="inputPswd-login">Password</label>
+                <img src="../static/locker.png" alt="pswd-login" class="pswdIcon-login">
+                <button class="button" role="button"><span class="text">Enter</span></button>
+                
+                <a href="/signUp" class="link"><span class="text">Doesn't have an account?</span></a>
+            </div>
+            
+        </div>
+        
+        
+    </form>
+    
+    <div class="alert">{{ alert }}</div>
+
+    <script src="../static/login.js"></script>
+</body>
+</html>
